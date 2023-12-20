@@ -1,13 +1,14 @@
-public class King extends ChessPiece{
-    public King(String color){
+public class King extends ChessPiece {
+    public King(String color) {
         super(color);
     }
+
     @Override
     public String getColor() {
         return color;
     }
 
-    public String getSymbol(){
+    public String getSymbol() {
         return "K";
     }
 
@@ -29,16 +30,17 @@ public class King extends ChessPiece{
     public boolean isUnderAttack(ChessBoard board, int line, int column) {
         boolean isUnderAttack = false;
         for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++){
+            for (int j = 0; j < 8; j++) {
                 if (board.board[i][j] != null) {
-                    if (!board.board[i][j].getColor().equals(getColor())){
+                    if (!board.board[i][j].getColor().equals(getColor())) {
                         if (board.board[i][j].canMoveToPosition(board, i, j, line, column)) {
                             isUnderAttack = true;
                         }
                     }
                 }
             }
-        } return isUnderAttack;
+        }
+        return isUnderAttack;
 
     }
 }

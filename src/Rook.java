@@ -31,7 +31,8 @@ public class Rook extends ChessPiece {
                 if (chessBoard.board[toLine][column] != null) {
                     if (chessBoard.board[toLine][column].getColor().equals(this.color) && chessBoard.board[toLine][column] != this)
                         return false;
-                    else return !chessBoard.board[toLine][column].getColor().equals(this.color) && chessBoard.board[toLine][column] != this;
+                    else
+                        return !chessBoard.board[toLine][column].getColor().equals(this.color) && chessBoard.board[toLine][column] != this;
                 } else return true;
 
             } else if (line == toLine) {
@@ -50,7 +51,8 @@ public class Rook extends ChessPiece {
                 if (chessBoard.board[toLine][toColumn] != null) {
                     if (chessBoard.board[toLine][toColumn].getColor().equals(this.color) && chessBoard.board[toLine][toColumn] != this)
                         return false;
-                    else return !chessBoard.board[toLine][toColumn].getColor().equals(this.color) && chessBoard.board[toLine][toColumn] != this;
+                    else
+                        return !chessBoard.board[toLine][toColumn].getColor().equals(this.color) && chessBoard.board[toLine][toColumn] != this;
                 } else return true;
             } else return false;
         } else return false;
